@@ -17,8 +17,16 @@
 
   $response = curl_exec($curl);
 
-  curl_close($curl);
-  echo $response;
-  return $response;
+  if($e = curl_error($curl)) {
+    echo $e;
+}
+else {
+    $price = json_decode($response, true);
+    print_r($price);
+}
+
+return $price;
+
+curl_close($ch); 
 
   ?>

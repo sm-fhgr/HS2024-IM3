@@ -11,18 +11,12 @@ if($e = curl_error($ch)) {
     echo $e;
 }
 else {
-    $decoded = json_decode($response, true);
-    print_r($decoded);
+    $newsfeed = json_decode($response, true);
+    print_r($newsfeed);
 }
 
+return $newsfeed;
+
 curl_close($ch);  
-
-
-// file_put_contents('output.json', $response);
-
-// print_r($response);
-// return $response;
-
-// exit;
 
 ?>
