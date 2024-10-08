@@ -104,22 +104,67 @@ meter {
 
 :root {
     --Background:#1E1A44;
-    --Primary: #007bff;
-    --Secondary: #6c757d;
-    --Success: #28a745;
-    --Danger: #dc3545;
-    --Warning: #ffc107;
-    --Info: #17a2b8;
-    --Light: #f8f9fa;
-    --Dark: #343a40;
-    --White: #fff;
-    --Black: #000;
+    --Bitcoin:#FED263;
+    --News: #91B3FA;
+    --PageElements: #F2541B;
+    --White: #FFFFFF;
+    --Grey: #D9D9D9;
 }
 
 
 body {
-    padding: auto;
-    margin-left: auto;
+    margin-left: 5%;
+    margin-top: 2%;
     background-color: var(--Background);
-    width: min (1440px, 90%);
+    width: min(1440px, 90%);
+}
+
+
+
+/* Header Stuff */
+
+.headerGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 16px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-column: 1 / span 2;
+    background-color: transparent;
+    transition: 
+}
+
+#home:hover {
+    color: var(--PageElements);
+}
+
+#about {
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-column: 3 / span 2;
+    background-color: transparent;
+}
+
+#about:hover {
+    color: var(--PageElements);
+}
+
+#analyse {
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-column: 5 / span 2;
+    background-color: transparent;
 }
