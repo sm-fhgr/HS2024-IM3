@@ -179,12 +179,12 @@ button {
 
 button:hover {
     background-color: var(--PageElements);
-    /* transform: translateY(-10px) scale(1.05); */
+    transform: translateY(-10px) scale(1.05);
     box-shadow: 2px 35px 32px -8px rgb(34, 0, 53);
     cursor: pointer;
 }
 
-button.currencybtn {
+.currencybtn {
     display: flex;
     color: var(--White);
     font-size: 1rem;
@@ -192,11 +192,14 @@ button.currencybtn {
     justify-content: center;
     background-color: var(--PageElements);
     padding: 0.2rem 1rem;
-    transition: background-color 0.2s ease-in-out;
+    border-radius: 3.125rem;
+    text-transform: uppercase;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-button.currencybtn:hover {
+.currencybtn:hover {
     background-color: transparent;
+    box-shadow: 2px 15px 16px -8px rgb(34, 0, 53);
     cursor: pointer;
 }
 
@@ -305,4 +308,39 @@ button#cta:hover {
     grid-row: 4 / span 2;
     margin-left: 14rem;
     margin-top: -5rem;
+}
+
+/* Analyse Page */
+
+
+#instruction {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.analysisSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 1.5rem;
+    grid-column: 1 / span 2;
+    margin-top: 3rem;
+}
+
+#newsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    background-color: rgba(145, 179, 250, 0.33);
+    border-radius: 33px;
+}
+
+#priceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    background-color: rgba(254, 210, 99, 0.33);
+    border-radius: 33px;
 }
