@@ -14,9 +14,9 @@ else {
     include_once('config.php');
     $pdo=new PDO($dsn, $username, $password, $options);
     $newsfeed = json_decode($response, true);
-    // echo  "<pre>";
-    // print_r($newsfeed["feed"]);
-    // echo "</pre>";
+    echo  "<pre>";
+    print_r($newsfeed["feed"]);
+    echo "</pre>";
     foreach($newsfeed["feed"] as $feed_item) {
         $title = $feed_item['title'];
         $url = $feed_item['url'];

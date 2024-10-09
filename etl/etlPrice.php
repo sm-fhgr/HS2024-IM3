@@ -37,9 +37,7 @@
       // print_r($price);
       // echo "</pre>";
 
-  
-
-    // Convert the Unix timestamp to SQL TIMESTAMP format (YYYY-MM-DD HH:MM:SS)
+      // Convert the Unix timestamp to SQL TIMESTAMP format (YYYY-MM-DD HH:MM:SS)
     $sqlTimestamp = date('Y-m-d H:i:s', $timestamp);
 
     // Insert the price and the converted timestamp into the database
