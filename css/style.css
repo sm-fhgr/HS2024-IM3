@@ -1,4 +1,8 @@
 @charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+
 /***
     The new CSS reset - version 1.8.5 (last updated 14.6.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -111,60 +115,194 @@ meter {
     --Grey: #D9D9D9;
 }
 
-
 body {
-    margin-left: 5%;
-    margin-top: 2%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: var(--Background);
-    width: min(1440px, 90%);
+    font-family: 'Sora', sans-serif;
+}
+
+
+main {
+    margin: auto;
+    margin-top: 5rem;
+    background-color: var(--Background);
+    width: min(1440px, 90rem);
+    font-family: 'Sora', sans-serif;
 }
 
 
 
 /* Header Stuff */
 
-.headerGrid {
+
+header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    gap: 0px 16px;
+    gap: 0px 1rem;
+    grid-column: 1 / span 12; 
 }
 
-.col {
-    display: flex;
+
+nav {
+    grid-column: 1 / span 3;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
+
 }
 
-#home {
+ul {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex: 1;
+    gap: 1rem;
+    
+}
+
+button {
+    display: flex;
+    padding: var(--space-s, 0.5rem) var(--space-m, 1rem);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     color: var(--White);
-    font-size: 1.5rem;
-    font-weight: bold;
+    border: none;
+    border-radius: 3.125rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+button:hover {
+    background-color: var(--PageElements);
+    /* transform: translateY(-10px) scale(1.05); */
+    box-shadow: 2px 35px 32px -8px rgb(34, 0, 53);
+    cursor: pointer;
+}
+
+button.currencybtn {
+    display: flex;
+    color: var(--White);
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--PageElements);
+    padding: 0.2rem 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button.currencybtn:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#currency {
+    display:flex;
+    grid-column: 12 / span 1;
+    justify-content: right;
+}
+
+
+/* Typography Stuff */
+
+h1 {
+    font-size: 7rem;
+    color: var(--White);
+}
+
+
+h4 {
+    font-size: 2rem;
+    color: var(--White);
+    line-height: 1.4;
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--White);
+    line-height: 1.6;
+}
+
+
+/* Hero Stuff */
+
+.hero {
+    display: block;
+    margin-top: 8rem;
+}
+
+span#news {
+    color: var(--News);
+}
+
+span#price {
+    color: var(--Bitcoin);
+}
+
+#illustration {
+    justify-content: right;
+    margin-top: -8.5rem;
+    margin-left: 58.5rem;
+    scale: 1.3;
+}
+
+button#cta {
+    display: flex;
+    padding: var(--space-s, 0.5rem) var(--space-m, 1rem);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--White);
+    border: none;
+    border-radius: 3.125rem;
+    font-size: 1.2rem;
+    background-color: var(--PageElements);
+    margin-top: -2.5rem;
+    margin-left: 25rem;
+}
+
+button#cta:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#ctasection {
+    margin-top: -6rem;
+    margin-right: 45rem;
+}
+
+
+/* About Page */
+
+.aboutSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px 1.5rem;
     grid-column: 1 / span 2;
-    background-color: transparent;
-    transition: 
+    margin-top: 3rem;
 }
 
-#home:hover {
-    color: var(--PageElements);
+.question {
+    margin-bottom: 4rem;
+    padding-right: 1rem;
 }
 
-#about {
-    color: var(--White);
-    font-size: 1.5rem;
-    font-weight: bold;
-    grid-column: 3 / span 2;
-    background-color: transparent;
+#btcimage {
+    scale: 1.5;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    margin-left: 12rem;
+    margin-top: 3rem;
 }
 
-#about:hover {
-    color: var(--PageElements);
-}
-
-#analyse {
-    color: var(--White);
-    font-size: 1.5rem;
-    font-weight: bold;
-    grid-column: 5 / span 2;
-    background-color: transparent;
+#newsimage {
+    scale: 1.3;
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 2;
+    margin-left: 14rem;
+    margin-top: -5rem;
 }
