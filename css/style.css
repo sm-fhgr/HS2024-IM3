@@ -185,7 +185,7 @@ button:hover {
 }
 
 .currencybtn {
-    display: flex;
+    display: none;
     color: var(--Background);
     font-size: 1rem;
     align-items: center;
@@ -204,7 +204,7 @@ button:hover {
 }
 
 #currency {
-    display:flex;
+    display:none;
     grid-column: 12 / span 1;
     justify-content: right;
 }
@@ -237,6 +237,7 @@ h4 {
 h5 {
     font-size: 1.5rem;
     color: var(--White);
+    line-height: 1.6;
 }
 
 p {
@@ -248,19 +249,10 @@ p {
 .news-item > a {
     color: var(--White);
     text-decoration:underline;
+    font-size: 0.7rem;
 }
 
-.news-item > h4 {
-    font-size: 1.4rem;
-    color: var(--PageElements);
-    line-height: 1.6;
-}
 
-.news-item > p {
-    font-size: 1rem;
-    color: var(--White);
-    line-height: 1.6;
-}
 
 /* Hero Stuff */
 
@@ -345,9 +337,9 @@ button#cta:hover {
 
 
 #instruction {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .analysisSection {
@@ -363,7 +355,7 @@ button#cta:hover {
     justify-content: center;
     align-items: top; 
     margin-top: 3rem;
-    background-color: rgba(145, 179, 250, 0.33);
+    /* background-color: rgba(145, 179, 250, 0.33); */
     border-radius: 33px;
     width: calc(100% - 0.5rem);
     height: 70vh;
@@ -375,8 +367,9 @@ button#cta:hover {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    background-color: white;
+    background-color: #ffebb8;
     border-radius: 33px;
+    color: var(--White);
 }
 
 #news-feed {
@@ -388,8 +381,20 @@ button#cta:hover {
     border-radius: 33px;
     padding: 1rem;
     margin-bottom: 1rem;
+    background-color: rgba(145, 179, 250, 0.33);
   }
 
+    .news-item > p {
+        font-size: 0.7rem;
+    }
+
+    .news-item > h4 {
+        font-size: 1rem;
+        color: var(--Bitcoin);
+    }
+    .news-item > h5 {
+        font-size: 1rem;
+    }
 
 /* For Mobile */
 
@@ -414,6 +419,11 @@ button#cta:hover {
         font-size: 1rem;
     }
 
+    h5 {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
     #illustration {
         display: flex;
         justify-content: left;
@@ -434,7 +444,7 @@ button#cta:hover {
         margin-left: 0rem;
         margin-top: 1rem;
         font-size: 0.6rem;
-        padding: 0.1rem 0.3rem;
+        padding: 0.5rem 1rem;
     }
 
     #currency, .currencybtn, .currencybtn:hover {

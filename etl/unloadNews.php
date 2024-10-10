@@ -6,7 +6,7 @@ try {
     $pdo = new PDO($dsn, $username, $password, $options);
 
 
-    $sql = "SELECT * FROM Feed";
+    $sql = "SELECT * FROM Feed ORDER BY time_published DESC LIMIT 50";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 

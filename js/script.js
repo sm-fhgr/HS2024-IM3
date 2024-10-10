@@ -26,10 +26,12 @@ fetch('https://im3.saurabhmishra.ch/etl/unloadPrice.php')
                 datasets: [{
                     label: 'Price of Bitcoin',
                     data: prices,
-                    backgroundColor: 'rgba(255, 0, 0, 0.1)',
-                    borderColor: '#007bff',
-                    borderWidth: 1,
-                    pointRadius: 0 // Hide individual data points
+                    backgroundColor: '#F2541B', // Background color with --PageElements color
+                    borderColor: '#1E1A44', // Line color with --Background color
+          pointBackgroundColor: '#F2541B', // --Pageelements color for point background color
+          pointRadius: 4, // Set point radius for visibility
+          pointBorderWidth: 0.5, // Optional: Add a border around the point
+          pointBorderColor: '#1E1A44', // Optional: Color for the point border
                 }]
             },
             options: {
@@ -41,7 +43,7 @@ fetch('https://im3.saurabhmishra.ch/etl/unloadPrice.php')
                         },
                         title: {
                             display: true,
-                            text: 'Last 12 hours - Right side is latest price'
+                            text: 'Last 12 hours - Latest on the right'
                         }
                     },
                     y: {
