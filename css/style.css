@@ -217,11 +217,26 @@ h1 {
     color: var(--White);
 }
 
+h2 {
+    font-size: 3rem;
+    color: var(--White);
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: var(--White);
+}
+
 
 h4 {
     font-size: 2rem;
     color: var(--White);
     line-height: 1.4;
+}
+
+h5 {
+    font-size: 1.5rem;
+    color: var(--White);
 }
 
 p {
@@ -230,6 +245,22 @@ p {
     line-height: 1.6;
 }
 
+.news-item > a {
+    color: var(--White);
+    text-decoration:underline;
+}
+
+.news-item > h4 {
+    font-size: 1.4rem;
+    color: var(--PageElements);
+    line-height: 1.6;
+}
+
+.news-item > p {
+    font-size: 1rem;
+    color: var(--White);
+    line-height: 1.6;
+}
 
 /* Hero Stuff */
 
@@ -330,10 +361,12 @@ button#cta:hover {
 #newsContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top; 
     margin-top: 3rem;
     background-color: rgba(145, 179, 250, 0.33);
-    border-radius: 33px;
+    /* border-radius: 33px; */
+    height: 70vh;
+    overflow: scroll;
 }
 
 #priceContainer {
@@ -341,9 +374,19 @@ button#cta:hover {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    background-color: rgba(254, 210, 99, 0.33);
-    border-radius: 33px;
+    background-color: white;
+    /* border-radius: 33px; */
 }
+
+#news-feed {
+
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
 
 
 /* For Mobile */
