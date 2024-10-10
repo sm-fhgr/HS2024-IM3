@@ -186,11 +186,11 @@ button:hover {
 
 .currencybtn {
     display: flex;
-    color: var(--White);
+    color: var(--Background);
     font-size: 1rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--PageElements);
+    background-color: var(--Bitcoin);
     padding: 0.2rem 1rem;
     border-radius: 3.125rem;
     text-transform: uppercase;
@@ -343,4 +343,88 @@ button#cta:hover {
     margin-top: 3rem;
     background-color: rgba(254, 210, 99, 0.33);
     border-radius: 33px;
+}
+
+
+/* For Mobile */
+
+@media (max-width:1439px) {
+
+    main {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        width: calc(100% - 2rem);
+    }
+
+    .hero {
+        margin-top: 4rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    #illustration {
+        display: flex;
+        justify-content: left;
+        align-content: left;
+        margin: 0rem;
+        scale: 0.7;
+    }
+
+    #ctasection {
+        margin: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    button#cta {
+        margin-left: 0rem;
+        margin-top: 1rem;
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+    }
+
+    #currency, .currencybtn, .currencybtn:hover {
+        display: none;
+    }
+
+    .aboutSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px 1.5rem;
+        grid-column: 1 / span 1;
+        margin-top: 3rem;
+    }
+
+    #btcimage {
+        display: none;
+    }
+
+    #newsimage {
+        display: none;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    #instruction {
+        margin-top: 3rem;
+    }
+
+    .analysisSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px 1rem;
+        grid-column: 1 / span 1;
+        margin-top: 1rem;
+    }
 }
