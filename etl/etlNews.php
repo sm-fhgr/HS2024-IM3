@@ -1,6 +1,6 @@
 <?php
 
-$ch = curl_init("https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=CRYPTO:BTC&apikey=UU3RCFGRDEOZO0A3");
+$ch = curl_init("https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=CRYPTO:BTC&sort=LATEST&limit=100&apikey=UU3RCFGRDEOZO0A3");
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);

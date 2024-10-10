@@ -198,7 +198,7 @@ button:hover {
 }
 
 .currencybtn:hover {
-    background-color: transparent;
+    /* background-color: transparent; */
     box-shadow: 2px 15px 16px -8px rgb(34, 0, 53);
     cursor: pointer;
 }

@@ -2,7 +2,7 @@
   $curl = curl_init();
 
   curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://api.coinranking.com/v2/coin/Qwsogvtv82FCd/history?timePeriod=24h",
+    CURLOPT_URL => "https://api.coinranking.com/v2/coin/Qwsogvtv82FCd/history?timePeriod=12h",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
