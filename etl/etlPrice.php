@@ -2,7 +2,7 @@
   $curl = curl_init();
 
   curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://api.coinranking.com/v2/coin/Qwsogvtv82FCd/history?timePeriod=12h",
+    CURLOPT_URL => "https://api.coinranking.com/v2/coin/Qwsogvtv82FCd/price?referenceCurrencyUuid=5k-_VTxqtCEI",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -25,17 +25,23 @@
     $priceHistory = json_decode($response, true);
 
     // echo "<pre>";
+    // print_r($priceHistory["data"]);
+    // echo "</pre>";
+  }
+
+    // echo "<pre>";
     // print_r($priceHistory);
     // echo "</pre>";
 
     // Get the price and timestamp from the API response with a loop that goes through array priceHistory["data"]["history"][x] where x is the index of the price and timestamp
 
-    foreach($priceHistory["data"]["history"] as $priceHistory) {
-      $price = $priceHistory["price"];
-      $timestamp = $priceHistory["timestamp"];
-      // echo "<pre>";
-      // print_r($price);
-      // echo "</pre>";
+      $price = $priceHistory["data"]["price"];
+      $timestamp = $priceHistory["data"]["timestamp"];
+
+      print_r($price);
+
+      print_r($timestamp);
+
 
       // Convert the Unix timestamp to SQL TIMESTAMP format (YYYY-MM-DD HH:MM:SS)
     $sqlTimestamp = date('Y-m-d H:i:s', $timestamp);
@@ -43,10 +49,10 @@
     // Insert the price and the converted timestamp into the database
     $stmt = $pdo->prepare("INSERT INTO PriceHistory (price, timestamp) VALUES (:price, :timestamp)");
     $stmt->execute(['price' => $price, 'timestamp' => $sqlTimestamp]);
-    }
-  }
+  
+  
 
   curl_close($curl);
 
-  return $price;
+  return $priceHistory;
 ?>
