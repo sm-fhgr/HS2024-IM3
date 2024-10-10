@@ -6,42 +6,56 @@ fetch('https://im3.saurabhmishra.ch/etl/unloadPrice.php')
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        let labels = [];
         let prices = [];
-        let dates = [];
-        let i = 0;
+        let timestamps = [];
+        
         data.forEach(element => {
-            labels.push(element['date']);
+            timestamps.push(element['timestamp']);
             prices.push(element['price']);
-            dates.push(i);
-            i++;
         });
-        console.log(labels);
+        
+        console.log(timestamps);
         console.log(prices);
-        console.log(dates);
-
+        
         // Creating a line chart using Chart.js
         var ctx = document.getElementById('priceChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: labels,
+                labels: timestamps,
                 datasets: [{
                     label: 'Price of Bitcoin',
                     data: prices,
-                    backgroundColor: [
-                        '#FF0000',
-                    ],
-                    borderColor: [
-                        '#007bff',
-                    ],
-                    borderWidth: 1
+                    backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                    borderColor: '#007bff',
+                    borderWidth: 1,
+                    pointRadius: 0 // Hide individual data points
                 }]
             },
             options: {
                 scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'day'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Last 12 hours - Right side is latest price'
+                        }
+                    },
                     y: {
-                        beginAtZero: true
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'Price (USD)'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
                     }
                 }
             }
