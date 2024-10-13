@@ -356,7 +356,7 @@ button#cta:hover {
     align-items: top; 
     margin-top: 3rem;
     /* background-color: rgba(145, 179, 250, 0.33); */
-    border-radius: 33px;
+    /* border-radius: 33px; */
     width: calc(100% - 0.5rem);
     height: 70vh;
     overflow: scroll;
@@ -367,7 +367,7 @@ button#cta:hover {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    background-color: #ffebb8;
+    background-color: #fff3d5;
     border-radius: 33px;
     color: var(--White);
 }

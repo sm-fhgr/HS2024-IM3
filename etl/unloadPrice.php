@@ -7,7 +7,7 @@ try {
     $pdo = new PDO($dsn, $username, $password, $options);
 
 
-    $sql = "SELECT price, timestamp FROM PriceHistory WHERE timestamp >= NOW() - INTERVAL 12 HOUR";
+    $sql = "SELECT price, timestamp FROM PriceHistory WHERE timestamp >= NOW() - INTERVAL 36 HOUR";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
 
