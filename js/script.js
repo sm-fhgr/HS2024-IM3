@@ -29,8 +29,8 @@ fetch('https://im3.saurabhmishra.ch/etl/unloadPrice.php')
                     backgroundColor: '#F2541B', // Background color with --PageElements color
                     borderColor: '#1E1A44', // Line color with --Background color
           pointBackgroundColor: '#F2541B', // --Pageelements color for point background color
-          pointRadius: 2.5, // Set point radius for visibility
-          pointBorderWidth: 0.5, // Optional: Add a border around the point
+          pointRadius: 3, // Set point radius for visibility
+          pointBorderWidth: 1, // Optional: Add a border around the point
           pointBorderColor: '#1E1A44', // Optional: Color for the point border
                 }]
             },
