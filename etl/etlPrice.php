@@ -2,7 +2,7 @@
   $curl = curl_init();
 
   curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://api.coinranking.com/v2/coin/Qwsogvtv82FCd/price?referenceCurrencyUuid=5k-_VTxqtCEI",
+    CURLOPT_URL => "https://api.coinranking.com/v2/coin/Qwsogvtv82FCd/price?referenceCurrencyUuid=yhjMzLPhuIDl",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
