@@ -34,6 +34,12 @@ Otherwise, the project was relatively easy to follow through with the inputs and
 
 
 
+THE POSSIBILITIES:
+
+With paid APIs, this could be turned into a really useful resouce for crypto investors. It could become a personalized dashboard with custom fields and currencies, and could further intergrate wallets etc to further scale up.
+
+
+
 RESOURCES UTILIZED:
 
 Class inputs, youtube videos, Copilot.
